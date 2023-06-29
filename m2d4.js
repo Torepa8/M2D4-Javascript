@@ -31,7 +31,7 @@ const paul = {
 const amy = {
   name: "Amy",
   lastName: "Reed",
-  isAmbassador: false,
+  isAmbassador: true,
 }
 
 const prices = [34, 5, 2]  //lo sto vedendo come una serie di articoli nel carrello, oppure era un altro lo scopo forse
@@ -43,16 +43,16 @@ let sconto=30
 for(i=0;i<prices.length;i++){
   cart+=prices[i];
 }
-console.log(`Totale carrello ${cart}`)
+console.log(`Totale carrello ${cart}€ senza spedizione`)
 
 if(utenteCheEffettuaLAcquisto.isAmbassador){
   cart-=sconto/100*cart
 }
 
 if(cart>100){
-  console.log(`${utenteCheEffettuaLAcquisto.name} paga ${cart} con spedizione ${shippingCost-shippingCost}`)
+  console.log(`${utenteCheEffettuaLAcquisto.name} paga ${cart}€ + spedizione ${shippingCost-shippingCost}€`)
 }else{
-  console.log(`${utenteCheEffettuaLAcquisto.name} paga ${cart} con spedizione ${shippingCost}`)
+  console.log(`${utenteCheEffettuaLAcquisto.name} paga ${cart}€ + spedizione ${shippingCost}€`)
 }
 
 console.log("")
@@ -81,6 +81,6 @@ for(i=0;i<utenti.length;i++){
 
 console.log("Ecco tutti i clienti Ambassador")
 for(i=0;i<utentiAmbassador.length;i++){
-  console.log(utentiAmbassador[i])                    //possiamo visualizzare in
-  console.log(`${utenti[i].name} è un Ambassador`)    //questi 2 modi
+  console.log(utentiAmbassador[i])                              //possiamo visualizzare in
+  console.log(`${utentiAmbassador[i].name} è un Ambassador`)    //questi 2 modi
 }
