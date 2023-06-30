@@ -19,7 +19,7 @@ Infine, crea un SECONDO array in cui inserirai SOLO gli ambassador.
 const marco = {
   name: "Marco",
   lastName: "Rossi",
-  isAmbassador: true,
+  isAmbassador: false,
 }
 
 const paul = {
@@ -34,7 +34,7 @@ const amy = {
   isAmbassador: true,
 }
 
-const prices = [34, 5, 2]  //lo sto vedendo come una serie di articoli nel carrello, oppure era un altro lo scopo forse
+const prices = [340, 5, 2]  //lo sto vedendo come una serie di articoli nel carrello, oppure era un altro lo scopo forse
 const shippingCost = 50
 let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
 let cart=0
@@ -58,9 +58,9 @@ if(cart>100){
 console.log("")
 
 let utenti=[]
-utenti.push(marco)
-utenti.push(paul)
-utenti.push(amy)
+utenti.push(marco,paul,amy)
+// utenti.push(paul)
+// utenti.push(amy)
 
 for(let i=0;i<utenti.length;i++){
   if(utenti[i].isAmbassador){
