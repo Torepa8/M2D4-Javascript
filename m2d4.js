@@ -19,31 +19,40 @@ Infine, crea un SECONDO array in cui inserirai SOLO gli ambassador.
 const marco = {
   name: "Marco",
   lastName: "Rossi",
-  isAmbassador: false,
+  isAmbassador: true,
 }
 
 const paul = {
   name: "Paul",
   lastName: "Flynn",
-  isAmbassador: false,
+  isAmbassador: true,
 }
 
 const amy = {
   name: "Amy",
   lastName: "Reed",
-  isAmbassador: true,
+  isAmbassador: false,
 }
+
+let utenti=[]
+utenti.push(marco,paul,amy)
+// utenti.push(paul)
+// utenti.push(amy)
+
+// let randint=Math.floor(Math.random()*utenti.length)
+
 
 const prices = [340, 5, 2]  //lo sto vedendo come una serie di articoli nel carrello, oppure era un altro lo scopo forse
 const shippingCost = 50
-let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+// let utenteCheEffettuaLAcquisto = utenti[randint] //cambia il valore qui per provare se il tuo algoritmo funziona!
+let utenteCheEffettuaLAcquisto = marco //cambia il valore qui per provare se il tuo algoritmo funziona!
 let cart=0
 let sconto=30
 
 for(i=0;i<prices.length;i++){
   cart+=prices[i];
 }
-console.log(`Totale carrello ${cart}€ senza spedizione`)
+console.log(`Totale carrello ${cart}€ senza spedizione e senza eventuali sconti`)
 
 if(utenteCheEffettuaLAcquisto.isAmbassador){
   cart-=sconto/100*cart
@@ -57,10 +66,6 @@ if(cart>100){
 
 console.log("")
 
-let utenti=[]
-utenti.push(marco,paul,amy)
-// utenti.push(paul)
-// utenti.push(amy)
 
 for(let i=0;i<utenti.length;i++){
   if(utenti[i].isAmbassador){
