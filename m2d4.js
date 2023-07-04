@@ -40,12 +40,13 @@ utenti.push(marco,paul,amy)
 // utenti.push(amy)
 
 // let randint=Math.floor(Math.random()*utenti.length)
+// let utenteCheEffettuaLAcquisto = utenti[randint] 
 
 
 const prices = [340, 5, 2]  //lo sto vedendo come una serie di articoli nel carrello, oppure era un altro lo scopo forse
 const shippingCost = 50
-// let utenteCheEffettuaLAcquisto = utenti[randint] //cambia il valore qui per provare se il tuo algoritmo funziona!
-let utenteCheEffettuaLAcquisto = marco //cambia il valore qui per provare se il tuo algoritmo funziona!
+let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+
 let cart=0
 let sconto=30
 
